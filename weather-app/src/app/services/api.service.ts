@@ -9,7 +9,8 @@ export class ApiService {
 
 constructor(private http: HttpClient) { }
 
-getWeather() {
-  return this.http.get("http://api.weatherstack.com/access_key=5a87923e7859603168d362c0a141a20a")
+
+getWeather(location: string) {
+  return this.http.get('http://api.weatherstack.com/current?access_key=5a87923e7859603168d362c0a141a20a&query=' + location)
 }
 }
