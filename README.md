@@ -1,2 +1,2 @@
 # Angular-Weather-App
-A weather app built ion Angular
+A weather app built in Angular
