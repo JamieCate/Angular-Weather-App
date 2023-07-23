@@ -14,7 +14,7 @@ import { WeatherPageComponent } from './pages/weather-page/weather-page.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
