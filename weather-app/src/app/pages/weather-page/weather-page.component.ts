@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { FormBuilder } from "@angular/forms";
 
 
 @Component({
@@ -9,10 +10,15 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class WeatherPageComponent implements OnInit {
 
+  location: any;
+
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getWeather(location).subscribe(data => console.log(data))
+  }
+
+  sendLocation() {
+    this.api.getWeather(this.location).subscribe(data => console.log(data))
   }
 
 }
