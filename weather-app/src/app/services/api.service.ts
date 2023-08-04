@@ -7,10 +7,14 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ApiService {
 
+  private apiKey: any = '51fc45b76d111699cc326ec168203804'
+
 constructor(private http: HttpClient) { }
 
+// Api request plus query location
+getWeather(location: any) {
+  return this.http.get(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${this.apiKey}&units=metric`)
+}
 
-getWeather(location: string) {
-  return this.http.get('http://api.weatherstack.com/current?access_key=5a87923e7859603168d362c0a141a20a&query=' + location)
 }
-}
+
