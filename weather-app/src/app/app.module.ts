@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherPageComponent } from './pages/weather-page/weather-page.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { WeatherPageComponent } from './pages/weather-page/weather-page.componen
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
