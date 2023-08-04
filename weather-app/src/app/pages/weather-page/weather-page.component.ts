@@ -11,6 +11,8 @@ import { FormBuilder } from "@angular/forms";
 export class WeatherPageComponent implements OnInit {
 
   location: any;
+  searchResults: any;
+  displayIcon: any;
 
   constructor(private api: ApiService) { }
 
@@ -18,7 +20,10 @@ export class WeatherPageComponent implements OnInit {
   }
 
   sendLocation() {
-    this.api.getWeather(this.location).subscribe(data => console.log(data))
+    this.api.getWeather(this.location).subscribe(data => {
+      this.searchResults = data
+      console.log(this.searchResults)
+    })
   }
 
 }
